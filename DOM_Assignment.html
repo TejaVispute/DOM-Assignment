@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Assignment</title>
+</head>
+<style>
+    h1 {
+        letter-spacing: 2px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 18px;
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 10px;
+    }
+
+    #demo {
+        font-size: 35px;
+        font-weight: bolder;
+        letter-spacing: 2px;
+    }
+</style>
+
+<body>
+
+    <!-- heading -->
+    <h1>-:JavaScript DOM Assignment:-</h1>
+
+    <button id="btn">Click Me</button>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        // button has been accessed here
+        let btnvalue = document.getElementById('btn');
+
+        // added event listener on mouseover, clic, mouseout and accessed functions 
+        btnvalue.addEventListener('mouseover', fn1);
+        btnvalue.addEventListener('click', fn2);
+        btnvalue.addEventListener('mouseout', fn3);
+
+        // Making three function for calling at event listner
+        function fn1() {
+            document.getElementById('demo').innerHTML = " Mouseover Event Has been Fired";
+        }
+        function fn2() {
+            document.getElementById('demo').innerHTML = " Mouse Click Event Has been Fired";
+        }
+        function fn3() {
+            document.getElementById('demo').innerHTML = " Mouseout Event Has been Fired";
+        }
+
+    </script>
+</body>
+
+</html>
